@@ -41,5 +41,7 @@ def create_lock_window(parent):
     hwnd_line_edit.setGeometry(QRect(40, 460, 90, 20))
     hwnd_line_edit.setObjectName("hwnd_line_edit")
     hwnd_line_edit.setStyleSheet("background-color: rgb(239, 239, 239);")
+    hwnd_line_edit.setReadOnly(True)
+    hwnd_line_edit.setFont(font_label)
     hwnd_line_edit.setText('hwnd')
     hwnd_line_edit.setAlignment(Qt.AlignmentFlag.AlignCenter | Qt.AlignmentFlag.AlignHCenter)
