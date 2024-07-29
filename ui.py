@@ -31,7 +31,7 @@ class Unicorn(QMainWindow):
         lock_window.create_lock_window(central_widget)
         save_load.create_save_load(central_widget)
         status_bar.create_status_bar(central_widget)
-        keys.create_keyboard(central_widget)
+        keys.create_keys(central_widget)
 
 
 

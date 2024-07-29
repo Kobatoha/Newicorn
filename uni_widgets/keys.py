@@ -5,7 +5,7 @@ from PyQt6.QtCore import QRect
 from functions import functions, state, geometry
 
 
-def create_keyboard(parent):
+def create_keys(parent):
     font_check_box = QFont()
     font_check_box.setBold(True)
     font_check_box.setWeight(75)
