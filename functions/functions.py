@@ -99,3 +99,7 @@ def toggle_9():
 
 def toggle_tilda():
     print('press toggle_tilda')
+
+
+def toggle_res():
+    print('press toggle_res')

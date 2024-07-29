@@ -22,5 +22,4 @@ pressed_8 = False
 pressed_9 = False
 pressed_tilda = False
 
-
-
+pressed_res = False

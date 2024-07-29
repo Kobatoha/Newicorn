@@ -4,7 +4,7 @@ from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QVB
 from PyQt6.QtWidgets import QWidget, QPushButton, QVBoxLayout, QMainWindow, QProgressBar, QLineEdit, QLabel, QMenuBar
 from PyQt6.QtGui import QIcon, QPixmap, QFont
 from PyQt6.QtCore import QRect, QSize, Qt
-from uni_widgets import start_stop, lock_window, save_load, status_bar, keys
+from uni_widgets import start_stop, lock_window, save_load, status_bar, keys, resurrection
 
 
 class Unicorn(QMainWindow):
@@ -32,6 +32,7 @@ class Unicorn(QMainWindow):
         save_load.create_save_load(central_widget)
         status_bar.create_status_bar(central_widget)
         keys.create_keys(central_widget)
+        resurrection.create_resurrection(central_widget)
 
 
 
