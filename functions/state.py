@@ -1,3 +1,36 @@
+state_press = {
+    '1': False,
+    '2': False,
+    '3': False,
+    '4': False,
+    '5': False,
+    '6': False,
+    '7': False,
+    '8': False,
+    '9': False,
+    'f1': False,
+    'f2': False,
+    'f3': False,
+    'f4': False,
+    'f5': False,
+    'f6': False,
+    'f7': False,
+    'f8': False,
+    'f9': False,
+    'f10': False,
+    '`': False,
+    'q': False,
+    'w': False,
+    'e': False,
+    'r': False,
+    't': False,
+    'y': False,
+    'u': False,
+    'i': False,
+    'o': False,
+    'p': False
+}
+
 pressed_f1 = False
 pressed_f2 = False
 pressed_f3 = False
@@ -38,3 +71,4 @@ pressed_tilda = False
 
 pressed_res = False
 
+start = False
