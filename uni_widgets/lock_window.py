@@ -10,6 +10,13 @@ def create_lock_window(parent):
     font_button.setBold(False)
     font_button.setWeight(50)
 
+    font_label = QFont()
+    font_label.setPointSize(7)
+    font_label.setItalic(False)
+    font_label.setUnderline(False)
+    font_label.setStrikeOut(False)
+    font_label.setKerning(True)
+
     lock_window_button = QPushButton(parent)
     lock_window_button.setGeometry(QRect(30, 490, 41, 41))
     lock_window_button.setStyleSheet("background-color: rgb(255, 239, 220);")
@@ -20,13 +27,6 @@ def create_lock_window(parent):
     lock_window_button.clicked.connect(functions.lock_window)
 
     msg_box_active = False
-
-    font_label = QFont()
-    font_label.setPointSize(7)
-    font_label.setItalic(False)
-    font_label.setUnderline(False)
-    font_label.setStrikeOut(False)
-    font_label.setKerning(True)
 
     hwnd_label = QLabel(parent)
     hwnd_label.setGeometry(QRect(25, 530, 50, 21))
@@ -45,3 +45,5 @@ def create_lock_window(parent):
     hwnd_line_edit.setFont(font_label)
     hwnd_line_edit.setText('hwnd')
     hwnd_line_edit.setAlignment(Qt.AlignmentFlag.AlignCenter | Qt.AlignmentFlag.AlignHCenter)
+
+    return hwnd_line_edit

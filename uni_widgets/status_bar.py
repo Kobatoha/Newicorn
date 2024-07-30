@@ -1,7 +1,6 @@
 from PyQt6.QtWidgets import QStatusBar, QLabel
 from PyQt6.QtGui import QFont
 from PyQt6.QtCore import QRect, Qt
-from functions import functions
 
 
 def create_status_bar(parent):
@@ -21,3 +20,5 @@ def create_status_bar(parent):
     info_label.setFont(font_label)
     info_label.setObjectName("info_label")
     info_label.setStyleSheet("background: none;")
+
+    return info_label

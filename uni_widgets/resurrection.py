@@ -1,7 +1,7 @@
 from PyQt6.QtWidgets import QCheckBox, QLabel
 from PyQt6.QtGui import QFont
 from PyQt6.QtCore import QRect, Qt
-from functions import functions
+from functions import toggles
 
 
 def create_resurrection(parent):
@@ -15,6 +15,6 @@ def create_resurrection(parent):
     check_box_res.setObjectName("check_box_res")
     check_box_res.setText("res")
     check_box_res.setStyleSheet("background: none;")
-    check_box_res.stateChanged.connect(functions.toggle_res)
+    check_box_res.stateChanged.connect(toggles.toggle_res)
 
     pressed_res = False
