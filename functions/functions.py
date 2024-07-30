@@ -1,6 +1,6 @@
 from PyQt6.QtWidgets import QLabel, QLineEdit, QCheckBox
 from PyQt6.QtCore import Qt
-from functions import configuration
+from functions import configuration, state
 
 
 def start_stop(button, ui_elements):
@@ -8,21 +8,23 @@ def start_stop(button, ui_elements):
     check_boxes = ui_elements[1]
     if button.text() == 'Start':
         print('start')
+        state.start = True
         button.setText('Stop')
         info_label.setText("Started clicker")
         for check_box in check_boxes:
             key = check_box.text().lower()
-            state = check_box.checkState()
-            if state == Qt.CheckState.Checked:
-                configuration.key_with_toggle[key][1] = True
+            box_state = check_box.checkState()
+            if box_state == Qt.CheckState.Checked:
+                state.state_press[key] = True
 
     else:
         print('stop')
         button.setText('Start')
+        state.start = False
         info_label.setText('Stopped clicker')
         for check_box in check_boxes:
             key = check_box.text().lower()
-            configuration.key_with_toggle[key][1] = False
+            state.state_press[key] = False
 
 
 def lock_window():

@@ -34,7 +34,8 @@ class Unicorn(QMainWindow):
         resurrection.create_resurrection(central_widget)
         icons_and_lines.create_icons_and_lines(central_widget)
         profiles.create_profile(central_widget)
-        check_boxes = keys.create_keys(central_widget)
+        keys_boxes = keys.create_keys(central_widget)
+        check_boxes = keys_boxes[0]
 
         start_stop.create_start_stop(central_widget, [info_label, check_boxes])
 
