@@ -1,5 +1,28 @@
-def start_stop():
-    print('press start_stop')
+from PyQt6.QtWidgets import QLabel, QLineEdit, QCheckBox
+from PyQt6.QtCore import Qt
+from functions import configuration
+
+
+def start_stop(button, ui_elements):
+    info_label = ui_elements[0]
+    check_boxes = ui_elements[1]
+    if button.text() == 'Start':
+        print('start')
+        button.setText('Stop')
+        info_label.setText("Started clicker")
+        for check_box in check_boxes:
+            key = check_box.text().lower()
+            state = check_box.checkState()
+            if state == Qt.CheckState.Checked:
+                configuration.key_with_toggle[key][1] = True
+
+    else:
+        print('stop')
+        button.setText('Start')
+        info_label.setText('Stopped clicker')
+        for check_box in check_boxes:
+            key = check_box.text().lower()
+            configuration.key_with_toggle[key][1] = False
 
 
 def lock_window():
@@ -21,85 +44,13 @@ def status_bar_message(message):
     return 'status_bar_message'
 
 
-def toggle_f1():
-    print('press toggle_f1')
+def profile1():
+    print('press profile1')
 
 
-def toggle_f2():
-    print('press toggle_f2')
+def profile2():
+    print('press profile2')
 
 
-def toggle_f3():
-    print('press toggle_f3')
-
-
-def toggle_f4():
-    print('press toggle_f4')
-
-
-def toggle_f5():
-    print('press toggle_f5')
-
-
-def toggle_q():
-    print('press toggle_q')
-
-
-def toggle_w():
-    print('press toggle_w')
-
-
-def toggle_e():
-    print('press toggle_e')
-
-
-def toggle_r():
-    print('press toggle_r')
-
-
-def toggle_t():
-    print('press toggle_t')
-
-
-def toggle_1():
-    print('press toggle_1')
-
-
-def toggle_2():
-    print('press toggle_2')
-
-
-def toggle_3():
-    print('press toggle_3')
-
-
-def toggle_4():
-    print('press toggle_4')
-
-
-def toggle_5():
-    print('press toggle_5')
-
-
-def toggle_6():
-    print('press toggle_6')
-
-
-def toggle_7():
-    print('press toggle_7')
-
-
-def toggle_8():
-    print('press toggle_8')
-
-
-def toggle_9():
-    print('press toggle_9')
-
-
-def toggle_tilda():
-    print('press toggle_tilda')
-
-
-def toggle_res():
-    print('press toggle_res')
+def profile3():
+    print('press profile3')
