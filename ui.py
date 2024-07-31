@@ -36,8 +36,9 @@ class Unicorn(QMainWindow):
         profiles.create_profile(central_widget)
         keys_boxes = keys.create_keys(central_widget)
         check_boxes = keys_boxes[0]
+        line_edits = keys_boxes[1]
 
-        start_stop.create_start_stop(central_widget, [info_label, check_boxes])
+        start_stop.create_start_stop(central_widget, [info_label, check_boxes, line_edits])
 
 
 
