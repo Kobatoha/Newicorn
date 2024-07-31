@@ -1,4 +1,4 @@
-from functions import toggles, state, press_keys
+from functions import toggles, state
 
 # key_with_toggle = {
 #     'f1': [toggles.toggle_f1, state.pressed_f1],
