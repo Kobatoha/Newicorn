@@ -1,7 +1,7 @@
 import time
 
 from PyQt6.QtCore import Qt, QTimer
-from functions import configuration, press_keys, state
+from functions import configuration, state
 import threading
 import win32con
 import win32gui
@@ -16,8 +16,8 @@ def toggle_key(key, check_box, line_edit):
         if state.start:
             print(state.start)
             state.state_press[key] = True
-            press_key(key, line_edit)
-            # threading.Thread(target=configuration.key_with_press[0](line_edit)).start()
+            # press_key(key, line_edit)
+            threading.Thread(target=press_key(key, line_edit)).start()
     else:
         state.state_press[key] = False
     print(f'press toggle_{key}')
