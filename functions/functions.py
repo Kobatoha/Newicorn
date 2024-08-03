@@ -19,7 +19,7 @@ def start_stop(button, ui_elements):
     line_edits = ui_elements[2]
     num = 0
     if button.text() == 'Start':
-        print('start')
+        print('Unicorn start')
         state.start = True
         button.setText('Stop')
         info_label.setText("Started clicker")
@@ -33,9 +33,8 @@ def start_stop(button, ui_elements):
 
             num += 1
 
-
     else:
-        print('stop')
+        print('Clicker stop')
         button.setText('Start')
         state.start = False
         info_label.setText('Stopped clicker')

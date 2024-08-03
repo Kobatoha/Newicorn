@@ -6,6 +6,7 @@ from PyQt6.QtGui import QIcon, QPixmap, QFont
 from PyQt6.QtCore import QRect, QSize, Qt
 from uni_widgets import start_stop, lock_window, save_load, status_bar, keys, resurrection, icons_and_lines, profiles
 from functions import state, functions
+import threading
 
 
 class Unicorn(QMainWindow):
@@ -37,6 +38,8 @@ class Unicorn(QMainWindow):
         keys_boxes = keys.create_keys(central_widget)
         check_boxes = keys_boxes[0]
         line_edits = keys_boxes[1]
+
+        hotkey_insert = threading.Thread(target=functions.hotkey_thread_insert)
 
         start_stop.create_start_stop(central_widget, [info_label, check_boxes, line_edits])
 
