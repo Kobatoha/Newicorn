@@ -39,9 +39,11 @@ class Unicorn(QMainWindow):
         check_boxes = keys_boxes[0]
         line_edits = keys_boxes[1]
 
-        hotkey_insert = threading.Thread(target=functions.hotkey_thread_insert)
+        self.start_stop_button = start_stop.create_start_stop(central_widget, [info_label, check_boxes, line_edits])
 
-        start_stop.create_start_stop(central_widget, [info_label, check_boxes, line_edits])
+    def toggle_start_stop(self):
+        self.start_stop_button.click()
+
 
 
 
